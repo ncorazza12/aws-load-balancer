@@ -1,4 +1,4 @@
 output "lb_url" {
-    value = "http://${aws_lb.ec2_lb.dns_name}"
-    description = "URL pública do Load Balancer"
+  value       = "http://${module.loadbalancer.lb_dns}"
+  description = "URL pública do Load Balancer"
 }
