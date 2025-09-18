@@ -4,9 +4,9 @@
 terraform {
   backend "s3" {
     bucket  = "iac-aws-s3-load-balancer" # Nome do bucket S3
-    key     = "terraform.tfstate"          # Caminho do arquivo de state
-    region  = "us-east-1"                  # Região do bucket
-    encrypt = true                         # Criptografa o state
+    key     = "terraform.tfstate"        # Caminho do arquivo de state
+    region  = "us-east-1"                # Região do bucket
+    encrypt = true                       # Criptografa o state
   }
 }
 

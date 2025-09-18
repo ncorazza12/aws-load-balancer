@@ -8,10 +8,10 @@ resource "aws_internet_gateway" "this" {
 }
 
 resource "aws_subnet" "public" {
-  for_each = var.subnets
-  vpc_id                 = aws_vpc.this.id
-  cidr_block             = each.value
-  availability_zone      = each.key
+  for_each                = var.subnets
+  vpc_id                  = aws_vpc.this.id
+  cidr_block              = each.value
+  availability_zone       = each.key
   map_public_ip_on_launch = true
 }
 
@@ -24,8 +24,8 @@ resource "aws_route_table" "public" {
 }
 
 resource "aws_route_table_association" "public" {
-  for_each      = aws_subnet.public
-  subnet_id     = each.value.id
+  for_each       = aws_subnet.public
+  subnet_id      = each.value.id
   route_table_id = aws_route_table.public.id
 }
 
