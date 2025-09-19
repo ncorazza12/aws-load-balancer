@@ -31,7 +31,7 @@ variable "key_name" {
 # Variável do Bucket S3
 ############################################################
 variable "bucket_name" {
-  default = "meu-bucket-exemplo"
+  default = "aws-s3-load-balancer-nickolas"
   type    = string
 
   validation {
