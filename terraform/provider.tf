@@ -3,10 +3,10 @@
 ############################################################
 terraform {
   backend "s3" {
-    bucket  = "iac-aws-s3-load-balancer" # Nome do bucket S3
-    key     = "terraform.tfstate"        # Caminho do arquivo de state
-    region  = "us-east-1"                # Região do bucket
-    encrypt = true                       # Criptografa o state
+    bucket  = "aws-s3-backend-load-balancer" # Nome do bucket S3
+    key     = "terraform.tfstate"            # Caminho do arquivo de state
+    region  = "us-east-1"                    # Região do bucket
+    encrypt = true                           # Criptografa o state
   }
 }
 
